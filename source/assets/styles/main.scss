@@ -177,6 +177,11 @@ h1 {
     transition: 1s cubic-bezier(.92, -0.08, .3, 1.25);
 }
 
+.logo-in-gallery {
+    font-size: 6em;
+    margin: -25px 0;
+}
+
 blockquote {
     position: absolute;
     bottom: 145px;
@@ -222,13 +227,111 @@ address {
 
 
 ul[data-liffect="zoomOut"] {
-    padding: 0;
+    padding: 0px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     & li {
         list-style: none;
+        margin: 0 20px 13px 0;
     }
+    & li:nth-child(3n+3) {
+        margin-right: 0;
+    }
+    & img {
+        position: relative;
+        display: block;      
+        cursor: pointer;
+    }   
+}
+
+
+figcaption {
+    background: white; 
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    transition: .5s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translate3d(0,200%,0);
+    z-index: 2;
+    & .icons {
+        display: flex;
+        align-items: center;
+        color: $brown;
+        & i {
+            margin-left: 15px;
+        }
+    }
+     & h2 {
+//          font-family: 'fontleroybrownregular';
+          font-size: 2em;
+          margin: 0;
+          font-weight: 100;
+    }
+    & p {
+        position: absolute;
+        top: -200px;
+        left: 0;
+        width: 100%;
+        opacity: 0;        
+        color: $beige;
+        font-size: 22px;
+        z-index: 2;
+    }
+}
+
+figcaption i,
+figcaption h2,
+figcaption p{
+    transition: all .4s;  
+    transform: translate3d(0,200%,0);  
+}
+
+ul[data-liffect="zoomOut"] li:hover p {
+    opacity: 1;
+}
+
+ul[data-liffect="zoomOut"] li::before {
+   content: '';    
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;        
+   background: linear-gradient(to bottom right,#002f4b,#dc4225);
+   transition: .4s ease-in-out;
+   opacity: 0;    
+}
+
+ul[data-liffect="zoomOut"] li:hover::before {
+    z-index: 1;
+    opacity: .2;
+}
+
+ul[data-liffect="zoomOut"] li:hover figcaption {   
+	transform: translate3d(0,0,0);
+}
+
+ul[data-liffect="zoomOut"] li:hover h2 {   
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.2s;
+    transform: translate3d(0,0,0);
+}
+
+ul[data-liffect="zoomOut"] li:hover figcaption .icons i:first-child {   
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.3s;
+    transform: translate3d(0,0,0);
+    
+}
+
+ul[data-liffect="zoomOut"] li:hover figcaption .icons i:last-child {   
+	-webkit-transition-delay: 0.15s;
+	transition-delay: .4s;
+    transform: translate3d(0,0,0);
 }
 
 ul[data-liffect="zoomOut"] li {
@@ -241,7 +344,8 @@ ul[data-liffect="zoomOut"] li {
     -o-animation: zoomOut 600ms ease both;
     -o-animation-play-state: paused;
     animation: zoomOut 600ms ease both;
-    animation-play-state: paused;   
+    animation-play-state: paused;
+    overflow: hidden;
 }
 
 ul[data-liffect="zoomOut"].play li {
@@ -276,6 +380,13 @@ ul[data-liffect="zoomOut"].play li {
 
 
 
+
+
+
+
+
+
+
 @media screen and (max-width: 1140px) {
     .container {       
         flex-direction: column;
@@ -287,6 +398,9 @@ ul[data-liffect="zoomOut"].play li {
     
     .menu {
         height: 50px;
+        position: static;
+        flex-direction: row;
+        justify-content: flex-end;
     }
     
     nav {
@@ -299,6 +413,7 @@ ul[data-liffect="zoomOut"].play li {
     
     .content {
         border-right: none;
+        margin-left: 0;
     }
     
     h1 {
@@ -333,7 +448,7 @@ ul[data-liffect="zoomOut"].play li {
     
     .basket {
         margin: 0;
-        align-self: flex-end;
+        align-self: flex-start;
         margin-top: 7px;        
     }
     
