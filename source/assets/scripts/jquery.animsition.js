@@ -190,3 +190,23 @@
     }
   };
 })(jQuery);
+
+
+$(document).ready(function() {
+  $(".animsition").animsition({
+    inClass               :   'fade-in',
+    outClass              :   'fade-out',
+    inDuration            :    3500,
+    outDuration           :    800,
+    linkElement           :   '.animsition-link', 
+    touchSupport          :    true, 
+    loading               :    true,
+    loadingParentElement  :   'body', 
+    loadingClass          :   'animsition-loading',
+    unSupportCss          : [ 'animation-duration',
+                              '-webkit-animation-duration',
+                              '-o-animation-duration'
+                            ]
+ 
+  });
+});

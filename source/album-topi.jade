@@ -1,6 +1,6 @@
 extends layout/layout
 block content   
-    div.container.animsition
+    div.container
         section.menu
             div.basket
                    img.cart(src='/assets/images/cart.svg', width='32', height='32')
@@ -16,11 +16,11 @@ block content
             div.subcribe
                 p Subcribe
             address
-                | Санкт-Петербург
-                br
-                | Большой Казачий переулок
-                br
-                | 911 235 1587
+                   | Санкт-Петербург 
+                   br
+                   | Большой Казачий переулок
+                   br
+                   | 8(921) 566 08 39
             div.social-icons
                   a(href='')
                     i.fa.fa-vk.fa-2x
@@ -29,13 +29,33 @@ block content
                   a(href='')
                     i.fa.fa-twitter.fa-2x
                   a(href='')
-                    i.fa.fa-skype.fa-2x 
+                    i.fa.fa-skype.fa-2x   
         section.content
-            video(autoplay='autoplay', loop='loop', poster='' id='my-video')
-                source(src='/assets/images/cloud.mp4', type='video/mp4')
             a(href='')
-                h1(data-scroll-reveal='data-scroll-reveal="enter from the bottom after 1s') GHappy art
-                blockquote 
-                    p for ordinary people with extraordinary dreams
+                h1.logo-in-gallery.into-gallery GHappy art
+                
+            div 
+                a.back-albums(href='gallery.html') назад к альбомам    
+            ul(data-liffect='zoomOut')
+                   li
+                       img(src='/assets/images/item2.jpg', width='400')
+                                                
+                   li
+                       img(src='/assets/images/item1.jpg', width='400')
+                   
+                       
+ 
+
+                      
+                  
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
                   
       

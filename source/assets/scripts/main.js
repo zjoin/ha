@@ -1,21 +1,6 @@
-//$(document).ready(function() {
-//  $(".animsition").animsition({
-//    inClass               :   'fade-in',
-//    outClass              :   'fade-out',
-//    inDuration            :    3500,
-//    outDuration           :    800,
-//    linkElement           :   '.animsition-link', 
-//    touchSupport          :    true, 
-//    loading               :    true,
-//    loadingParentElement  :   'body', 
-//    loadingClass          :   'animsition-loading',
-//    unSupportCss          : [ 'animation-duration',
-//                              '-webkit-animation-duration',
-//                              '-o-animation-duration'
-//                            ]
-// 
-//  });
-//}); 
+ window.scrollReveal = new scrollReveal();
+
+ 
 
 $(document).ready(function () {
     $("ul[data-liffect] li").each(function (i) {
@@ -35,3 +20,13 @@ $(document).ready(
         nice = $("html").niceScroll();
     }
 );
+
+
+
+
+// Defer pointer events on animated header
+$(window).load(function (){
+  $('header').css({
+    'pointer-events': 'auto'
+  });
+});
