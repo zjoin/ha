@@ -124,9 +124,8 @@ nav li {
         margin-left: 20px;
         background: $brown;
         color: $beige;
-        padding: 5px 20px;
-        vertical-align: top;
-        border-radius: 15px;
+        padding: 5px 33px;
+        vertical-align: top;        
         font-family: 'Philosopher', sans-serif;
     }
 }
@@ -221,6 +220,9 @@ blockquote {
 address {
     font-style: normal;
     margin-bottom: 20px;
+    & span {
+        font-weight: 700;
+    }
 }
 
 
@@ -415,20 +417,47 @@ ul[data-liffect="zoomOut"].play li {
 .back-albums {
     background: $brown;    
     color: $beige;
-    padding: 10px 20px;
+    padding: 10px 20px 10px 30px;
     display: inline-block;
     margin-top: 2px;
     transition: .7s cubic-bezier(0, .61, .2, 1.33);
     font-family: 'Philosopher', sans-serif;
+    position: relative;
     &:hover {
         background: $turquoise;
+//        color: $brown;
+    }
+    & .fa-caret-left {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        margin: 0 0 0 10px;
+        font-size: 1.7em;
     }
 }
 
 
+.box-items {
+    position: relative;
+}
 
 
+.item-price {
+    padding: 5px 10px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+}
 
+.fa.fa-search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 55555;
+    transform: translate(-50%,-50%);
+    margin: -10px 0 0 10px;
+    font-size: 3em;
+} 
 
 
 
