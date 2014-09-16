@@ -560,12 +560,14 @@ ul[data-liffect="zoomOut"].play li {
     position: relative;
 }
 
-
 .item-price {
     padding: 5px 10px;
     background: white;
     display: flex;
     justify-content: space-between;
+    & .number-price {
+        margin-left: -128px;
+    }
 }
 
 .fa.fa-search {
@@ -576,6 +578,7 @@ ul[data-liffect="zoomOut"].play li {
     transform: translate(-50%,-50%);
     margin: -10px 0 0 10px;
     font-size: 3em;
+    display: none;
 } 
 
 
