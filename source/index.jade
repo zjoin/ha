@@ -3,7 +3,7 @@ block content
     div.container.animsition
         section.menu
             div.basket
-                   img.cart(src='/assets/images/cart.svg', width='32', height='32')
+                   img.cart.btn.btn-small.modal-trigger(data-modal-id='modal-9' src='/assets/images/cart.svg', width='32', height='32')
                    section.basket-counter
                        span 4
                        span | 700$
@@ -35,7 +35,16 @@ block content
                 source(src='/assets/images/cloud.mp4', type='video/mp4')
             a(href='')
                 h1(data-scroll-reveal='data-scroll-reveal="enter from the bottom after 1s') GHappy art
-                blockquote 
+            i.fa.fa-volume-down    
+            blockquote 
                     p for ordinary people with extraordinary dreams
-                  
+            #modal-9.modal(data-modal-effect='fadescale')
+                  .modal-content
+                    h2 Consectetur adipiscing elit
+                    div
+                        input(type='text', placeholder='Имя')
+                    div
+                        input(type='text', placeholder='Email')
+                
+
       
