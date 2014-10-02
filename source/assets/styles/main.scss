@@ -37,7 +37,7 @@
 @import 'shame';
 
 $beige :     	#f6e9e0;
-$turquoise : 	#78b3a0;
+$tur : 	#78b3a0;
 $brown :     	#54403F;
 $white :     	#ffffff;
 
@@ -81,7 +81,7 @@ body {
 
 .menu {
 	width: 200px;	
-	background: $turquoise;	
+	background: $tur;	
 	min-width: 288px;
 	z-index: 1;
     display: flex;
@@ -117,7 +117,7 @@ body {
     padding: 10px 70px;  
     cursor: pointer;
     &:hover span {
-        color: $turquoise;
+        color: $tur;
     }    
 }
 
@@ -125,7 +125,6 @@ body {
     align-self: center;
     cursor: pointer;  
 }
-
 
 /***********************************************\
 
@@ -155,26 +154,28 @@ Modal basket settings
 }
 
 .modal-content {
-  background: #ffffff;
+  background: white;
   position: relative;
   margin: 0 auto;
   padding: 40px;
-  border-radius: 3px;
-    & div {
-        margin-bottom: 15px;
-    }
-    & input {
-        width: 100%;
-        padding: 1em 2em;
-        border: 1px solid #ddd;
-        &:focus {
-            border: 1px solid $brown;
-        }
-    }
+//  border-radius: 3px;
+   .fa-close {
+       position: absolute;
+       top: 0;
+       right: -60px;       
+       color: $beige;
+       cursor: pointer;
+       transition: all .8s;
+       &:hover {
+           color: $tur;
+           transform: rotate(90deg);
+       }
+   }
+    
 }
 
 .modal-overlay {
-  background: #000000;
+  background: black;
   position: fixed;
   visibility: hidden;
   top: 0;
@@ -208,7 +209,48 @@ Modal basket settings
 }
 
 
+/***********************************************\
 
+Вasket list settings
+
+\***********************************************/
+.basket-list {
+    & dl {
+        display: flex;
+        background: $beige;
+        padding: 10px;
+    }
+    & .block-add-remove {
+        display: flex;
+        flex: auto;
+        justify-content: flex-end;
+    & span {
+        margin-right: 15px;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover {
+            color: $tur;
+        }
+    }
+  }    
+}
+
+.basket-cash {
+    align-self: flex-end;
+    padding: 5px 30px;
+    background: $tur;
+}
+
+.block-more {
+    text-align: right;
+    & button {
+        border: 0;
+        color: $beige;
+        background: $brown;
+        width: 100%;
+        padding: 10px;
+    }
+}
 
 
 nav {
@@ -270,7 +312,7 @@ nav	a:focus:before {
 	width: 200px;	
 	background: $beige;
 	flex: 4;
-	border-right: 40px solid $turquoise;
+	border-right: 40px solid $tur;
     position: relative;
 	overflow: hidden;
     text-align: center;
@@ -367,6 +409,15 @@ address {
     }
 }
 
+.box-apps {
+    border-left: 2px solid;
+    padding-left: 10px;
+    & a:first-child {
+        margin-right: 10px;
+    }
+}
+
+
 
 ul[data-liffect="zoomOut"] {
     padding: 0px 0;
@@ -406,7 +457,7 @@ figcaption {
         color: $brown;
         & i {
             margin-left: 15px;
-            color: $turquoise;
+            color: $tur;
         }
     }
      & h2 {
@@ -540,7 +591,7 @@ ul[data-liffect="zoomOut"].play li {
     font-family: 'Philosopher', sans-serif;
     position: relative;
     &:hover {
-        background: $turquoise;
+        background: $tur;
 //        color: $brown;
     }
     & .fa-caret-left {
@@ -663,7 +714,11 @@ ul[data-liffect="zoomOut"].play li {
     }
 }
 
-
+@media screen and (max-height: 900px) {
+    blockquote {
+        bottom: -100px;
+    }
+}
 
 
 

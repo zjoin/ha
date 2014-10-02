@@ -1,12 +1,22 @@
 block form    
        #basket.modal(data-modal-effect='fadescale')
                   .modal-content
-                    h2 Consectetur adipiscing elit
-                    div
-                        input(type='text', placeholder='Имя')
-                    div
-                        input(type='text', placeholder='Email')
+                    h2 В корзине
+                    section.basket-list                                                   
+                        dl                            
+                            dt
+                                img(src='/assets/images/item3.jpg', width='150')
+                                dd описание и стоимость
+                            div.block-add-remove
+                                section
+                                    span.fa.fa-minus.fa-2x                            
+                                    span.fa.fa-plus.fa-2x     
+                                    span.fa.fa-remove.fa-2x
+                                section.basket-cash
+                                    span 546
    
-                
+                    section.fa.fa-remove.fa-close.fa-3x.modal-close
+                    section.block-more
+                        button далее
 
       
