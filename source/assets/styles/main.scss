@@ -37,13 +37,14 @@
 @import 'shame';
 
 $beige :     	#f6e9e0;
-$turquoise : 	#78b3a0;
+$tur : 	#78b3a0;
 $brown :     	#54403F;
 $white :     	#ffffff;
 
 
 * {
     box-sizing: border-box;
+    outline: none;
 }
 
 a{
@@ -52,6 +53,11 @@ a{
 a:link {
     color: #54403F;
 }
+
+html {
+    font-size: 62.5%;
+}
+
 html,body {
 	height: 100%;
 }
@@ -60,6 +66,7 @@ body {
 	background: $beige url(/assets/images/green_dust_scratch.png);
     color: $brown;
     line-height: 1.5;
+    font-size: 1.4rem;
     background-attachment: fixed;
 }
 
@@ -67,14 +74,14 @@ body {
 	display: flex;
     flex-direction: row;
 	min-height: 100%;   
-	max-width: 1704px;
+	max-width: 1920px;
 	margin: auto;    
     
 }
 
 .menu {
 	width: 200px;	
-	background: $turquoise;	
+	background: $tur;	
 	min-width: 288px;
 	z-index: 1;
     display: flex;
@@ -88,23 +95,167 @@ body {
 .basket {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0 210px 0;
+    margin: 20px 0 0 0;
+    flex-wrap: wrap;
+    position: relative;
+    & .checkout {  
+        margin: auto;
+        position: relative;
+        left: 30px;
+        top: -20px;
+        z-index: -1;
+        transition: all .3s ease-in-out;
+    } 
+    &:hover .checkout {
+        top: 10px;
+    }
 }
 
 .basket-counter {
     background: $brown;
     color: $beige;
-    padding: 10px 70px;
+    padding: 10px 70px;  
+    cursor: pointer;
+    &:hover span {
+        color: $tur;
+    }    
 }
 
 .cart {
     align-self: center;
-    cursor: pointer;
+    cursor: pointer;  
 }
 
-nav {	
-//	padding: 0 20px;
+/***********************************************\
+
+Modal basket settings
+
+\***********************************************/
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  max-width: 940px;
+  min-width: 320px;
+  height: auto;
+  z-index: 2000;
+  visibility: hidden;
+  backface-visibility: hidden; 
+  transform: translate(-50%, -50%);
+}
+.modal.modal-show {
+  visibility: visible;
+}
+.lt-ie9 .modal {
+  top: 0;
+  margin-left: -315px;
+}
+
+.modal-content {
+  background: white;
+  position: relative;
+  margin: 0 auto;
+  padding: 40px;
+//  border-radius: 3px;
+   .fa-close {
+       position: absolute;
+       top: 0;
+       right: -60px;       
+       color: $beige;
+       cursor: pointer;
+       transition: all .8s;
+       &:hover {
+           color: $tur;
+           transform: rotate(90deg);
+       }
+   }
+    
+}
+
+.modal-overlay {
+  background: black;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0; 
+  transition-property: visibility, opacity; 
+  transition-delay: 0.5s, 0.1s;  
+  transition-duration: 0, 0.5s;
+}
+.modal-show .modal-overlay {
+  visibility: visible;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;  
+  transition: opacity 0.5s;
+}
+
+.modal[data-modal-effect=fadescale] .modal-content {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;  
+  transform: scale(0.7, 0.7);  
+  transition: all 0.5s ease-in-out;
+}
+.modal[data-modal-effect=fadescale].modal-show .modal-content {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+
+/***********************************************\
+
+Вasket list settings
+
+\***********************************************/
+.basket-list {
+    & dl {
+        display: flex;
+        background: $beige;
+        padding: 10px;
+    }
+    & .block-add-remove {
+        display: flex;
+        flex: auto;
+        justify-content: flex-end;
+    & span {
+        margin-right: 15px;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover {
+            color: $tur;
+        }
+    }
+  }    
+}
+
+.basket-cash {
+    align-self: flex-end;
+    padding: 5px 30px;
+    background: $tur;
+}
+
+.block-more {
+    text-align: right;
+    & button {
+        border: 0;
+        color: $beige;
+        background: $brown;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+
+nav {
     flex: 1;
+    margin-top: 210px;
 }
 
 nav ul {
@@ -161,7 +312,7 @@ nav	a:focus:before {
 	width: 200px;	
 	background: $beige;
 	flex: 4;
-	border-right: 40px solid $turquoise;
+	border-right: 40px solid $tur;
     position: relative;
 	overflow: hidden;
     text-align: center;
@@ -178,6 +329,13 @@ video {
      height: auto;
 //     z-index: -1000;
      overflow: hidden;  
+}
+
+.fa-volume-down {
+    position: absolute;
+    top: 0;
+    right: 16px;
+    font-size: 50px;
 }
 
 
@@ -206,8 +364,8 @@ h1 {
 }
 
 blockquote {
-    position: absolute;
-    bottom: 145px;
+    position: relative;
+    bottom: -260px;
     left: 0;
     width: 100%;
     z-index: 1;
@@ -251,6 +409,15 @@ address {
     }
 }
 
+.box-apps {
+    border-left: 2px solid;
+    padding-left: 10px;
+    & a:first-child {
+        margin-right: 10px;
+    }
+}
+
+
 
 ul[data-liffect="zoomOut"] {
     padding: 0px 0;
@@ -290,7 +457,7 @@ figcaption {
         color: $brown;
         & i {
             margin-left: 15px;
-            color: $turquoise;
+            color: $tur;
         }
     }
      & h2 {
@@ -424,7 +591,7 @@ ul[data-liffect="zoomOut"].play li {
     font-family: 'Philosopher', sans-serif;
     position: relative;
     &:hover {
-        background: $turquoise;
+        background: $tur;
 //        color: $brown;
     }
     & .fa-caret-left {
@@ -532,7 +699,7 @@ ul[data-liffect="zoomOut"].play li {
     
     .basket-counter {
         margin-left: 20px;
-        padding: 5px 40px;
+        padding: 5px 40px;       
     }
     
     address, .subcribe {
@@ -547,7 +714,11 @@ ul[data-liffect="zoomOut"].play li {
     }
 }
 
-
+@media screen and (max-height: 900px) {
+    blockquote {
+        bottom: -100px;
+    }
+}
 
 
 
