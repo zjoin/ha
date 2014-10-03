@@ -223,7 +223,12 @@ Modal basket settings
     & .block-add-remove {
         display: flex;
         flex: auto;
-        justify-content: flex-end;
+        justify-content: space-between;
+        flex-direction: column;
+        & .rule-basket-items {
+            display: flex;
+            justify-content: flex-end;
+        }
     & span {
         margin-right: 15px;
         cursor: pointer;
@@ -238,6 +243,7 @@ Modal basket settings
 .basket-cash {
     align-self: flex-end;
     padding: 5px 30px;
+    color: $beige;
     background: $tur;
 }
 
