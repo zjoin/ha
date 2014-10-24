@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>Styleguide</title>
+  <meta name="generator" content="kss-node" />
+
+  <meta name="viewport" content="width=device-width">
+
+  <script src="../../assets/scripts/vendor.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="../../assets/styles/main.css">
+
+</head>
+<body><div id="kss-wrapper">
+  <div id="kss-nav">
+    <header id="kss-header">
+      Styleguide
+    </header>
+    <aside>
+      <nav><ul>
+        <li><a class="link" href="index.html">0.0: Overview</a></li>
+          <li><a class="link" href="section-1.html">1.0: Grid</a></li>
+          <li><a class="link" href="section-2.html">2.0: Helpers</a></li>
+          <li><a class="link" href="section-3.html">3.0: Typography</a></li>
+      </ul></nav>
+    </aside>
+  </div>
+  <div role="main" id="kss-main">
+    <div id="kss-content">
+
+          <section class="kss-section kss-depth-1">
+            <h1 class="kss-title"><span class="kss-ref">2.0</span> - Helpers</h1>
+                  <p>Various helper classes used throughout the site</p>
+
+          </section>
+          <section class="kss-section kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">2.1</span> - Positioning</h2>
+                <div class="kss-description content"><p>The <code>dummy</code> class is only for presentation purposes and should be ignored.</p>
+</div>
+
+                <ul class="kss-modifiers"><li><span class="kss-modifiers__name">.center</span> - <p>Centers an element. The element needs to a have a width defined.</p>
+ </li><li><span class="kss-modifiers__name">.left</span> - <p>Floats the element left.</p>
+ </li><li><span class="kss-modifiers__name">.right</span> - <p>Floats the element right.</p>
+ </li><li><span class="kss-modifiers__name">.flex-center</span> - <p>Center aligns items inside of it with flex</p>
+ </li></ul>
+
+                <div class="kss-module">
+                  <div class="kss-rendered-markup"><div class="{$modifiers} dummy">{$modifiers}</div></div>
+                </div>
+
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.center</div>
+                  <div class="kss-rendered-markup"><div class="center dummy">center</div></div>
+                </div>
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.left</div>
+                  <div class="kss-rendered-markup"><div class="left dummy">left</div></div>
+                </div>
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.right</div>
+                  <div class="kss-rendered-markup"><div class="right dummy">right</div></div>
+                </div>
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.flex-center</div>
+                  <div class="kss-rendered-markup"><div class="flex-center dummy">flex-center</div></div>
+                </div>
+
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;div class=&quot;{$modifiers} dummy&quot;&gt;{$modifiers}&lt;/div&gt;</pre>
+                </div>
+          </section>
+          <section class="kss-section kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">2.2</span> - Spacing</h2>
+                <div class="kss-description content"><p>Spacers are used to positioning specific elements. Usually it can be modules
+or elements that just need a litle nudge in a specific direction and a whole module
+modifier class is overkill for it.</p>
+</div>
+
+                <ul class="kss-modifiers"><li><span class="kss-modifiers__name">.flush</span> - <p>Clear the bottom margin.</p>
+ </li><li><span class="kss-modifiers__name">.slim</span> - <p>Half spacer unit for the button <code>$spacing / 2</code></p>
+ </li><li><span class="kss-modifiers__name">.landmark</span> - <p>Usefull for hero elements. Gives element a double bototm margin.</p>
+ </li><li><span class="kss-modifiers__name">.row</span> - <p>Turns element into a block element and gives it a bottom margin.</p>
+ </li></ul>
+
+                <div class="kss-module">
+                  <div class="kss-rendered-markup"><div class="{$modifiers}">{$modifiers}</div></div>
+                </div>
+
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.flush</div>
+                  <div class="kss-rendered-markup"><div class="flush">flush</div></div>
+                </div>
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.slim</div>
+                  <div class="kss-rendered-markup"><div class="slim">slim</div></div>
+                </div>
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.landmark</div>
+                  <div class="kss-rendered-markup"><div class="landmark">landmark</div></div>
+                </div>
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.row</div>
+                  <div class="kss-rendered-markup"><div class="row">row</div></div>
+                </div>
+
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;div class=&quot;{$modifiers}&quot;&gt;{$modifiers}&lt;/div&gt;</pre>
+                </div>
+          </section>
+          <section class="kss-section kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">2.3</span> - Text Helpers</h2>
+                <div class="kss-description content"><p>Various helpers for text element</p>
+</div>
+
+                <ul class="kss-modifiers"><li><span class="kss-modifiers__name">.align-right</span> - <p>Align text right</p>
+ </li><li><span class="kss-modifiers__name">.align-center</span> - <p>Align text center</p>
+ </li><li><span class="kss-modifiers__name">.align-left</span> - <p>Align text left</p>
+ </li><li><span class="kss-modifiers__name">.caps</span> - <p>All CAPS text</p>
+ </li><li><span class="kss-modifiers__name">.capitalize</span> - <p>Capitalize text</p>
+ </li><li><span class="kss-modifiers__name">.muted</span> - <p>Muted text</p>
+ </li><li><span class="kss-modifiers__name">.bold</span> - <p>Makes text bold weight</p>
+ </li><li><span class="kss-modifiers__name">.normal</span> - <p>Makes text normal weight</p>
+ </li><li><span class="kss-modifiers__name">.light</span> - <p>Makes text light weight</p>
+ </li></ul>
+
+                <div class="kss-module">
+                  <div class="kss-rendered-markup"><div class="{$modifiers}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh nisl, mollis eu pretium ac, porta in nulla. Nam id quam a eros dignissim mollis. Aliquam sed sodales elit. Vivamus venenatis diam quis velit tincidunt, in dapibus nisi rutrum. Etiam consequat, nulla ut dictum rhoncus, justo mauris vestibulum elit, et auctor mauris magna eu sem. Aenean a sapien dolor. Phasellus odio enim, gravida a eleifend non, hendrerit a neque. Donec gravida, diam eu congue viverra, metus nisl porttitor felis, id consequat est nulla a purus. Donec a felis libero. Pellentesque sit amet ultrices odio, commodo pulvinar tortor. Curabitur urna nisi, luctus eu tristique in, lobortis ac neque.</div></div>
+                </div>
+
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.align-right</div>
+                  <div class="kss-rendered-markup"><div class="align-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh nisl, mollis eu pretium ac, porta in nulla. Nam id quam a eros dignissim mollis. Aliquam sed sodales elit. Vivamus venenatis diam quis velit tincidunt, in dapibus nisi rutrum. Etiam consequat, nulla ut dictum rhoncus, justo mauris vestibulum elit, et auctor mauris magna eu sem. Aenean a sapien dolor. Phasellus odio enim, gravida a eleifend non, hendrerit a neque. Donec gravida, diam eu congue viverra, metus nisl porttitor felis, id consequat est nulla a purus. Donec a felis libero. Pellentesque sit amet ultrices odio, commodo pulvinar tortor. Curabitur urna nisi, luctus eu tristique in, lobortis ac neque.</div></div>
+                </div>
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.align-center</div>
+                  <div class="kss-rendered-markup"><div class="align-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh nisl, mollis eu pretium ac, porta in nulla. Nam id quam a eros dignissim mollis. Aliquam sed sodales elit. Vivamus venenatis diam quis velit tincidunt, in dapibus nisi rutrum. Etiam consequat, nulla ut dictum rhoncus, justo mauris vestibulum elit, et auctor mauris magna eu sem. Aenean a sapien dolor. Phasellus odio enim, gravida a eleifend non, hendrerit a neque. Donec gravida, diam eu congue viverra, metus nisl porttitor felis, id consequat est nulla a purus. Donec a felis libero. Pellentesque sit amet ultrices odio, commodo pulvinar tortor. Curabitur urna nisi, luctus eu tristique in, lobortis ac neque.</div></div>
+                </div>
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.align-left</div>
+                  <div class="kss-rendered-markup"><div class="align-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh nisl, mollis eu pretium ac, porta in nulla. Nam id quam a eros dignissim mollis. Aliquam sed sodales elit. Vivamus venenatis diam quis velit tincidunt, in dapibus nisi rutrum. Etiam consequat, nulla ut dictum rhoncus, justo mauris vestibulum elit, et auctor mauris magna eu sem. Aenean a sapien dolor. Phasellus odio enim, gravida a eleifend non, hendrerit a neque. Donec gravida, diam eu congue viverra, metus nisl porttitor felis, id consequat est nulla a purus. Donec a felis libero. Pellentesque sit amet ultrices odio, commodo pulvinar tortor. Curabitur urna nisi, luctus eu tristique in, lobortis ac neque.</div></div>
+                </div>
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.caps</div>
+                  <div class="kss-rendered-markup"><div class="caps">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh nisl, mollis eu pretium ac, porta in nulla. Nam id quam a eros dignissim mollis. Aliquam sed sodales elit. Vivamus venenatis diam quis velit tincidunt, in dapibus nisi rutrum. Etiam consequat, nulla ut dictum rhoncus, justo mauris vestibulum elit, et auctor mauris magna eu sem. Aenean a sapien dolor. Phasellus odio enim, gravida a eleifend non, hendrerit a neque. Donec gravida, diam eu congue viverra, metus nisl porttitor felis, id consequat est nulla a purus. Donec a felis libero. Pellentesque sit amet ultrices odio, commodo pulvinar tortor. Curabitur urna nisi, luctus eu tristique in, lobortis ac neque.</div></div>
+                </div>
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.capitalize</div>
+                  <div class="kss-rendered-markup"><div class="capitalize">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh nisl, mollis eu pretium ac, porta in nulla. Nam id quam a eros dignissim mollis. Aliquam sed sodales elit. Vivamus venenatis diam quis velit tincidunt, in dapibus nisi rutrum. Etiam consequat, nulla ut dictum rhoncus, justo mauris vestibulum elit, et auctor mauris magna eu sem. Aenean a sapien dolor. Phasellus odio enim, gravida a eleifend non, hendrerit a neque. Donec gravida, diam eu congue viverra, metus nisl porttitor felis, id consequat est nulla a purus. Donec a felis libero. Pellentesque sit amet ultrices odio, commodo pulvinar tortor. Curabitur urna nisi, luctus eu tristique in, lobortis ac neque.</div></div>
+                </div>
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.muted</div>
+                  <div class="kss-rendered-markup"><div class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh nisl, mollis eu pretium ac, porta in nulla. Nam id quam a eros dignissim mollis. Aliquam sed sodales elit. Vivamus venenatis diam quis velit tincidunt, in dapibus nisi rutrum. Etiam consequat, nulla ut dictum rhoncus, justo mauris vestibulum elit, et auctor mauris magna eu sem. Aenean a sapien dolor. Phasellus odio enim, gravida a eleifend non, hendrerit a neque. Donec gravida, diam eu congue viverra, metus nisl porttitor felis, id consequat est nulla a purus. Donec a felis libero. Pellentesque sit amet ultrices odio, commodo pulvinar tortor. Curabitur urna nisi, luctus eu tristique in, lobortis ac neque.</div></div>
+                </div>
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.bold</div>
+                  <div class="kss-rendered-markup"><div class="bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh nisl, mollis eu pretium ac, porta in nulla. Nam id quam a eros dignissim mollis. Aliquam sed sodales elit. Vivamus venenatis diam quis velit tincidunt, in dapibus nisi rutrum. Etiam consequat, nulla ut dictum rhoncus, justo mauris vestibulum elit, et auctor mauris magna eu sem. Aenean a sapien dolor. Phasellus odio enim, gravida a eleifend non, hendrerit a neque. Donec gravida, diam eu congue viverra, metus nisl porttitor felis, id consequat est nulla a purus. Donec a felis libero. Pellentesque sit amet ultrices odio, commodo pulvinar tortor. Curabitur urna nisi, luctus eu tristique in, lobortis ac neque.</div></div>
+                </div>
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.normal</div>
+                  <div class="kss-rendered-markup"><div class="normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh nisl, mollis eu pretium ac, porta in nulla. Nam id quam a eros dignissim mollis. Aliquam sed sodales elit. Vivamus venenatis diam quis velit tincidunt, in dapibus nisi rutrum. Etiam consequat, nulla ut dictum rhoncus, justo mauris vestibulum elit, et auctor mauris magna eu sem. Aenean a sapien dolor. Phasellus odio enim, gravida a eleifend non, hendrerit a neque. Donec gravida, diam eu congue viverra, metus nisl porttitor felis, id consequat est nulla a purus. Donec a felis libero. Pellentesque sit amet ultrices odio, commodo pulvinar tortor. Curabitur urna nisi, luctus eu tristique in, lobortis ac neque.</div></div>
+                </div>
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.light</div>
+                  <div class="kss-rendered-markup"><div class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh nisl, mollis eu pretium ac, porta in nulla. Nam id quam a eros dignissim mollis. Aliquam sed sodales elit. Vivamus venenatis diam quis velit tincidunt, in dapibus nisi rutrum. Etiam consequat, nulla ut dictum rhoncus, justo mauris vestibulum elit, et auctor mauris magna eu sem. Aenean a sapien dolor. Phasellus odio enim, gravida a eleifend non, hendrerit a neque. Donec gravida, diam eu congue viverra, metus nisl porttitor felis, id consequat est nulla a purus. Donec a felis libero. Pellentesque sit amet ultrices odio, commodo pulvinar tortor. Curabitur urna nisi, luctus eu tristique in, lobortis ac neque.</div></div>
+                </div>
+
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;div class=&quot;{$modifiers}&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh nisl, mollis eu pretium ac, porta in nulla. Nam id quam a eros dignissim mollis. Aliquam sed sodales elit. Vivamus venenatis diam quis velit tincidunt, in dapibus nisi rutrum. Etiam consequat, nulla ut dictum rhoncus, justo mauris vestibulum elit, et auctor mauris magna eu sem. Aenean a sapien dolor. Phasellus odio enim, gravida a eleifend non, hendrerit a neque. Donec gravida, diam eu congue viverra, metus nisl porttitor felis, id consequat est nulla a purus. Donec a felis libero. Pellentesque sit amet ultrices odio, commodo pulvinar tortor. Curabitur urna nisi, luctus eu tristique in, lobortis ac neque.&lt;/div&gt;</pre>
+                </div>
+          </section>
+          <section class="kss-section kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">2.4</span> - Misc. Helpers</h2>
+                <div class="kss-description content"><p>The <code>dummy</code> class is only for presentational purposes.</p>
+</div>
+
+                <ul class="kss-modifiers"><li><span class="kss-modifiers__name">.divider</span> - <p>Divider class. Adds a border to the bottom of the element</p>
+ </li><li><span class="kss-modifiers__name">.square</span> - <p>Makes the element behave a like a square image and retains its dimensions</p>
+ </li><li><span class="kss-modifiers__name">.rectangle</span> - <p>Makes the element behave a like a rectangle image and retains its dimensions</p>
+ </li><li><span class="kss-modifiers__name">.cursor</span> - <p>Change curser to pointer</p>
+ </li></ul>
+
+                <div class="kss-module">
+                  <div class="kss-rendered-markup"><div class="{$modifiers} dummy">{$modifiers}</div></div>
+                </div>
+
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.divider</div>
+                  <div class="kss-rendered-markup"><div class="divider dummy">divider</div></div>
+                </div>
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.square</div>
+                  <div class="kss-rendered-markup"><div class="square dummy">square</div></div>
+                </div>
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.rectangle</div>
+                  <div class="kss-rendered-markup"><div class="rectangle dummy">rectangle</div></div>
+                </div>
+                <div class="kss-module">
+                  <div class="kss-modifier-class">.cursor</div>
+                  <div class="kss-rendered-markup"><div class="cursor dummy">cursor</div></div>
+                </div>
+
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;div class=&quot;{$modifiers} dummy&quot;&gt;{$modifiers}&lt;/div&gt;</pre>
+                </div>
+          </section>
+          <section class="kss-section kss-depth-2">
+            <h2 class="kss-title"><span class="kss-ref">2.5</span> - Videos</h2>
+                <div class="kss-description content"><p>Use the <code>embed-container</code> class around embedded videos to get a responsive block.</p>
+</div>
+
+                <ul class="kss-modifiers"></ul>
+
+                <div class="kss-module">
+                  <div class="kss-rendered-markup"><div class="embed-container">
+  <iframe src="http://www.youtube.com/embed/J8wKORctsus"></iframe>
+</div></div>
+                </div>
+
+
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;div class=&quot;embed-container&quot;&gt;
+  &lt;iframe src=&quot;http://www.youtube.com/embed/J8wKORctsus&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</pre>
+                </div>
+          </section>
+    </div>
+  </div>
+  <!-- SCRIPTS -->
+  <script src="public/kss.js"></script>
+  <script src="public/prettify.js"></script>
+  <script src="../../assets/scripts/main.js" type="text/javascript"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      prettyPrint();
+    });
+  </script>
+</div></body>
+</html>
