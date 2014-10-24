@@ -199,3 +199,22 @@ var modules = {
 modules.init();
 
 
+
+function openMenu() {
+    var nav = $('nav');    
+    $('.fa-navicon').on('click', function() {
+        nav.toggle(50);
+        $('.content').toggleClass('opac');  
+//        var menuOverlay = $('<div class="menu-overlay"> </div>');
+//        menuOverlay.appendTo(document.body)
+    });
+}
+
+openMenu();
+
+
+
+
+
+
+
