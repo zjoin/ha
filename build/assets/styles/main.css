@@ -963,7 +963,6 @@ body {
   width: 200px;
   background: #78b3a0;
   min-width: 288px;
-  z-index: 1;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1270,7 +1269,8 @@ address {
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-transition: 1s linear;
-          transition: 1s linear; }
+          transition: 1s linear;
+  z-index: 1; }
   .social-icons a {
     color: #54403F;
     -webkit-transition: 0.7s cubic-bezier(0, 0.61, 0.2, 1.33);
@@ -1572,7 +1572,10 @@ ul[data-liffect="zoomOut"].play li {
     top: 50%;
     -webkit-transform: translate(-50px, -50px);
         -ms-transform: translate(-50px, -50px);
-            transform: translate(-50px, -50px); }
+            transform: translate(-50px, -50px);
+    z-index: 5; }
+  nav a:before {
+    color: #54403F; }
   nav ul {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
@@ -1589,17 +1592,21 @@ ul[data-liffect="zoomOut"].play li {
   blockquote {
     bottom: -100px; } }
 
-.menu-overlay {
-  position: fixed;
+.qaz {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: white;
-  opacity: 0.8;
-  z-index: 9;
-  -webkit-transition: all 0.3s;
-          transition: all 0.3s; }
+  background: #f6e9e0;
+  z-index: 5;
+  display: none; }
 
 .opac {
   opacity: 0.1; }
+
+.m-close-menu {
+  font-size: 2em;
+  display: inline-block;
+  margin: 3px 0 0 3px;
+  cursor: pointer; }
