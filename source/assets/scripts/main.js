@@ -199,18 +199,24 @@ var modules = {
 modules.init();
 
 
-
+var nav = $('nav');   
 function openMenu() {
-    var nav = $('nav');    
+   
     $('.fa-navicon').on('click', function() {
-        nav.toggle(50);
-        $('.content').toggleClass('opac');  
+        nav.fadeIn(850);
+//        $('.content').toggleClass('opac');  
 //        var menuOverlay = $('<div class="menu-overlay"> </div>');
 //        menuOverlay.appendTo(document.body)
+        $('.qaz').animate({width:'toggle'},350);      
     });
 }
 
 openMenu();
+
+$('.m-close-menu').on('click', function() {
+   $('.qaz').slideUp('fast'); 
+    nav.toggle();
+});
 
 
 
